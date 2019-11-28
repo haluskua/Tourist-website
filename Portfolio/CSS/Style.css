@@ -1,0 +1,107 @@
+@import url('../CSS/fonts.css');
+
+/*-------------css VARIABLES------------*/
+
+:root{
+    /*----- Them Colors -----*/
+    --bcg-green: #05de66;
+    --orange: #feaa85;
+    --pink: #f3c7b4;
+    --grey: #c5cdcb;
+    --green: #4bb08d;
+    --ocean: #0b9f95;
+    --sky: #51bac2;
+    --text-dark: #253237;
+    --text-grey: #5c6b73;
+    --baby--grey: #9db4c0;
+    --white: #ffffff;
+
+    /*--- Gradient Color --*/
+    --moon: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --beach: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+
+    /*----theme font-family ----*/
+    --Abel-font: 'Abel', cursive;
+    --Bebas-font: 'Bebea', cursive;
+    --Dancing-font: 'Dancing', cursive;
+    --Nanum-font: 'Nanum', cursive;
+    --Frank-font: 'Frank', cursive;
+    --Frank-font-bold: 'Frank-bold', cursive;
+    --Jomolhari-font: 'Jomolhari', cursive;
+    --Julius-font: 'Julius', cursive;
+    --Khand-font: 'Khand', cursive;
+    --Khand-bold-font: 'Khand-bold', cursive;
+
+}
+
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    /* background-color: green; */
+}
+
+/*-------------Global Classes ------------*/
+
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+/*---------------navbar--------------*/
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 40vh;
+    overflow: hidden;
+}
+.nav .nav-menu{
+    justify-content: space-between;
+    padding: 0 8px;
+    background: cornsilk;
+
+}
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+.nav .nav-items .nav-link{
+    font-family: var(--Nanum-font);
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+.nav .nav-items .nav-link:hover{
+    background-color: var(--pink);
+}
+.nav .nav-items .nav-link a{
+    font-family: var(--Frank-font);
+    color: var(--text-dark);
+    height: 100%;
+}
+.nav .nav-items .nav-link a:hover {
+    color: var(--white);
+}
+.nav .nav-brand a{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    letter-spacing: 0.03em;
+    color: var(--orange);
+    display: block;
+    font-family: var(--Khand-bold-font);
+}
+.nav .social{
+    padding: 1.4rem 0;
+}
