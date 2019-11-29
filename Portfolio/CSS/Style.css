@@ -1,3 +1,6 @@
+
+
+
 @import url('../CSS/fonts.css');
 
 /*-------------css VARIABLES------------*/
@@ -63,14 +66,37 @@ ul{
     background: white;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 40vh;
+    min-height: 100vh;
     overflow: hidden;
+    padding: 0;
+    transition: height 1s ease-in-out;
 }
 .nav .nav-menu{
     justify-content: space-between;
     padding: 0 8px;
-    background: cornsilk;
+    /* background: cornsilk; */
 
+}
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--ocean);
+}
+
+.collapse{
+    height: 30rem;
 }
 .nav .nav-items{
     display: flex;
@@ -83,11 +109,11 @@ ul{
     position: relative;
 }
 .nav .nav-items .nav-link:hover{
-    background-color: var(--pink);
+    background-color: var(--orange);
 }
 .nav .nav-items .nav-link a{
     font-family: var(--Frank-font);
-    color: var(--text-dark);
+    color: var(--ocean);
     height: 100%;
 }
 .nav .nav-items .nav-link a:hover {
@@ -105,3 +131,24 @@ ul{
 .nav .social{
     padding: 1.4rem 0;
 }
+.nav .social i{
+    padding: 0.2rem;
+    font-size: 1.5rem;
+}
+.nav .social i:hover{
+    color: var(--orange);
+}
+
+/*---------------View-port less than or eequal to 750px --------------*/
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+/*-------X--------View-port less than or eequal to 750px ------X--------*/
