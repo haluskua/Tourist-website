@@ -184,9 +184,10 @@ span {
 .nav .social i{
     padding: 0.2rem;
     font-size: 1.5rem;
+    color: var(--orange)
 }
 .nav .social i:hover{
-    color: var(--orange);
+    color: var(--sky);
 }
 
 /*-----------Main Content----------*/
