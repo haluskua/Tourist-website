@@ -61,5 +61,10 @@
     font-family: Frank-bold;
     src:url('../fonts/Frank_Ruhl_Libre/FrankRuhlLibre-Bold.ttf');
 }
+/*-----  font-family: Lexend_Deca-------*/
+@font-face{
+    font-family: Lexend_Deca;
+    src:url('../fonts/Lexend_Deca/LexendDeca-Regular.ttf');
+}
 
 

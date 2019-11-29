@@ -17,6 +17,7 @@
     --text-dark: #253237;
     --text-grey: #5c6b73;
     --baby--grey: #9db4c0;
+    --brown-sky: #283725;
     --white: #ffffff;
 
     /*--- Gradient Color --*/
@@ -34,6 +35,7 @@
     --Julius-font: 'Julius', cursive;
     --Khand-font: 'Khand', cursive;
     --Khand-bold-font: 'Khand-bold', cursive;
+    --Lexend-font: 'Lexend_Deca', cursive;
 
 }
 
@@ -42,9 +44,20 @@ html, body{
     margin: 0%;
     box-sizing: border-box;
     overflow: hidden;
+    overflow: scroll;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
 
     /* background-color: green; */
 }
+body::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+
+
 
 /*-------------Global Classes ------------*/
 
@@ -61,12 +74,47 @@ a{
 ul{
     list-style-type: none;
 }
+h1{
+    font-family: var(--Dancing-font);
+    font-size: 2.6rem;
+}
+
+h3{
+    font-family: var(--Nanum-font);
+    font-size: 2.6rem;
+    letter-spacing: 0.03;
+    font-weight: bolder;
+}
+
+h2{
+    font-family: var(--Lexend-font);
+}
+
+button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-family: var(--Nanum-font);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+span {
+    font-family: var(--Khand-font);
+}
+
+.container{
+    margin: 0 5vw;
+}
+
+
 /*---------------navbar--------------*/
 .nav{
     background: white;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 100vh;
+    min-height: 8vh;
     overflow: hidden;
     padding: 0;
     transition: height 1s ease-in-out;
@@ -74,7 +122,6 @@ ul{
 .nav .nav-menu{
     justify-content: space-between;
     padding: 0 8px;
-    /* background: cornsilk; */
 
 }
 .nav .toggle-collapse{
@@ -101,6 +148,7 @@ ul{
 .nav .nav-items{
     display: flex;
     margin: 0;
+    padding: 0;
 }
 .nav .nav-items .nav-link{
     font-family: var(--Nanum-font);
@@ -112,21 +160,23 @@ ul{
     background-color: var(--orange);
 }
 .nav .nav-items .nav-link a{
-    font-family: var(--Frank-font);
-    color: var(--ocean);
+    font-family: var(--Lexend-font);
+    color: var(--brown-sky);
+    letter-spacing: 0.03rem;
     height: 100%;
+    font-size: 1.25rem;
 }
 .nav .nav-items .nav-link a:hover {
     color: var(--white);
 }
 .nav .nav-brand a{
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
     padding: 0.5rem 0;
     letter-spacing: 0.03em;
     color: var(--orange);
     display: block;
-    font-family: var(--Khand-bold-font);
+    font-family: var(--Lexend-font);
 }
 .nav .social{
     padding: 1.4rem 0;
@@ -138,6 +188,125 @@ ul{
 .nav .social i:hover{
     color: var(--orange);
 }
+
+/*-----------Main Content----------*/
+    
+
+/*-----x------Main Content-----x-----*/
+
+
+
+/*-----------Site Title----------*/
+/* .site-title{
+    height: 100vh;
+} */
+
+main .site-title{
+    display: flex;
+    justify-content: center;
+    background: url('../assets/main_bcg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+    /* background: var(--text-dark); */
+}
+
+main .site-title .site-background{
+    padding-top: 10rem;
+    text-align: center;
+    color: var(--brown-sky);
+}
+main .site-title h1, h3{
+    margin: 3rem;
+    /* color: var(--bcg-green); */
+}
+
+main .site-title .btn{
+    margin: 1.8rem;
+    /* background: var(--moon); */
+    outline: none;
+
+}
+main .site-title .btn:hover{
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+
+}
+
+
+
+/*------X-----Site Title-----x-----*/
+
+/*-----------Blog Carousel----------*/
+
+main .blog{
+    background: url('../assets/Background-image.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+main .blog .blog-post{
+    padding-top: 2rem;
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--green);
+    margin: 5rem;
+}
+
+main .blog-content span {
+    display: block;
+}
+
+section .container .owl-nav{
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+    color: var(--text-grey);
+    background: var(--pink);
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav[class*='owl-']:hover{
+    background: transparent;
+    color: var(--green);
+
+}
+.owl-theme .owl-nav[class*='owl-']{
+    outline: none;
+}
+
+/*------X-------------Blog Carousel----------X------*/
+
+
+
+
+
 
 /*---------------View-port less than or eequal to 750px --------------*/
 
