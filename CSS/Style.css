@@ -237,8 +237,11 @@ main .site-title .btn:hover{
 }
 
 
-
 /*------X-----Site Title-----x-----*/
+
+
+
+
 
 /*-----------Blog Carousel----------*/
 
@@ -271,7 +274,7 @@ main .blog-content .blog-title{
 
 main .blog-content .btn-blog{
     padding: .7rem 2rem;
-    background: var(--green);
+    background: var(--orange);
     margin: 5rem;
 }
 
